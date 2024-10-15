@@ -88,11 +88,6 @@ logging.basicConfig(
 _logger = logging.getLogger(__name__)
 
 
-# TBD List:
-# - Add everything into one file instead of relying on the cloud lib
-# - Add help about setting up the .netrc file
-# - Add a Conda environment file
-
 '''
 Parse the command line arguments
 '''
@@ -150,7 +145,6 @@ token=podaac_cloud_lib.get_token(podaac_cloud_lib.edl_url)
 Search for the files on the PO.DAAC cloud
 '''
 params = {
-    'scroll': "true",
     'page_size': 2000,
     'sort_key': "-start_date",
     'ShortName': short_name, 
